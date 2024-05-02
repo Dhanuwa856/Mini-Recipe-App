@@ -1,0 +1,176 @@
+.container {
+  width: 900px;
+  background: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+
+}
+
+.main-title {
+  padding-top: 20px;
+  padding-left: 40px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0 10%;
+  gap: 2%;
+}
+
+.input-field {
+  flex-basis: 67%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  outline: 0;
+  font-size: 12px;
+  padding-left: 5px;
+  color: #444;
+  border-radius: 7px;
+}
+
+.input-field:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+
+}
+
+.submit-btn {
+  flex-basis: 28%;
+  height: 40px;
+  background: #3b82f6;
+  outline: 0;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.card {
+  width: 400px;
+  -webkit-box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 14px 15px 59px -7px rgba(0, 0, 0, 0.75);
+  padding: 20px 0;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.card-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin: 10px auto;
+  display: block;
+  position: relative;
+}
+
+.card-title {
+  font-size: 18px;
+  padding: 0 12%;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tags .fa-solid {
+  color: #3bf6b8;
+  font-size: 14px;
+}
+
+.totalNutrients {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 13px;
+  padding: 0 10%;
+  gap: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.totalNutrients h4 {
+  margin-top: 10px;
+  position: relative;
+}
+
+.totalNutrients h4::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #f14f4f;
+  position: absolute;
+  left: -10%;
+  top: 30%;
+}
+
+.link-btn button {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #3bf6b8;
+  padding: 10px 50px;
+  border: 0;
+  outline: 0;
+  border-radius: 7px;
+  cursor: pointer;
+
+}
+
+.link-btn button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card-image {
+  position: relative;
+}
+
+.meal-type {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  color: #000;
+  background: #fff;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.items-wrapper {
+  width: 100%;
+  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 25px;
+}
