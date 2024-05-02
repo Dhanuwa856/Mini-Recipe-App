@@ -124,6 +124,14 @@ const RecipeApp = () => {
           </div>
         ))}
       </div>
+      <div className="admin">
+        <p>
+          Created by
+          <a href="https://www.upwork.com/services/product/development-it-front-end-development-for-your-design-react-js-psd-to-html-1773174959735091200?ref=project_share">
+            Dhanushka Rathnayaka
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

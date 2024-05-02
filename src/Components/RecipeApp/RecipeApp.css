@@ -174,3 +174,22 @@
   grid-template-columns: 1fr 1fr;
   padding: 0 25px;
 }
+
+.admin p {
+  margin-top: 30px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.admin p a {
+  text-decoration: none;
+  color: #3b82f6;
+  margin-left: 5px;
+  transition: 1s;
+}
+
+.admin p a:hover {
+  color: #3bf6b8;
+}
