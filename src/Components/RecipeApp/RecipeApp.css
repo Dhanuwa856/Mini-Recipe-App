@@ -193,3 +193,24 @@
 .admin p a:hover {
   color: #3bf6b8;
 }
+
+.load-btn {
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #3b82f6;
+  color: #fff;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hidden-btn {
+  display: none;
+}

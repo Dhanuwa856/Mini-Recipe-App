@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 import "./RecipeApp.css";
-import Img01 from "../../assets/sample_img.jpg";
 
 const RecipeApp = () => {
   const [recipes, setRecipes] = useState([]);
+  const [page, setPage] = useState(1);
+  const [query, setQuery] = useState("");
 
   const apiKey = "e6b901b38d3c6d80e249f162639639a7";
   const appId = "0052b378";
 
   const search = async () => {
     const element = document.getElementsByClassName("input-field");
-    if (element[0].value === "") {
-      return 0;
+
+    if (query === "") {
+      return;
     }
     const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${element[0].value}&app_id=${appId}&app_key=${apiKey}`;
 
     const response = await fetch(url);
     const data = await response.json();
 
-    setRecipes(data.hits);
+    setRecipes((prevRecipes) => [...prevRecipes, ...data.hits]);
+  };
+  const handleSearch = () => {
+    setPage(1);
+    setRecipes([]);
+    search();
+  };
 
-    console.log(data.hits);
+  const loadMore = () => {
+    setPage(page + 1);
+    search();
   };
   return (
     <div className="container">
@@ -30,14 +40,10 @@ const RecipeApp = () => {
           type="text"
           className="input-field"
           placeholder="Search For a recipe"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <button
-          type="submit"
-          className="submit-btn"
-          onClick={() => {
-            search();
-          }}
-        >
+        <button type="submit" className="submit-btn" onClick={handleSearch}>
           Search
         </button>
       </div>
@@ -124,6 +130,12 @@ const RecipeApp = () => {
           </div>
         ))}
       </div>
+      {recipes.length > 0 && (
+        <button onClick={loadMore} className="load-btn">
+          Load More
+        </button>
+      )}
+
       <div className="admin">
         <p>
           Created by
